@@ -1,0 +1,11 @@
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\WiX-AdRemover.exe.config
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\WiX-AdRemover.exe
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\WiX-AdRemover.pdb
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.csproj.AssemblyReference.cache
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.csproj.SuggestedBindingRedirects.cache
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX_AdRemover.Form1.resources
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX_AdRemover.Properties.Resources.resources
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.csproj.GenerateResource.cache
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.csproj.CoreCompileInputs.cache
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.exe
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.pdb
