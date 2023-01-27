@@ -14,8 +14,10 @@ namespace WiX_AdRemover
 {
     public partial class Form1 : Form
     {
-        string[] files = null;
+        private string[] files = null;
         string path = null;
+        int foundfiles = 0;
+        private string tempfileNames;
         public bool FolderExists(string path)
         {
             return Directory.Exists(path);
@@ -63,11 +65,27 @@ namespace WiX_AdRemover
         private void ProcessFolder(string path)
         {
             string[] files = Directory.GetFiles(path, "*.html*", SearchOption.AllDirectories);
+
             foreach (string file in files)
             {
 
-                string fileName = Path.GetFileName(file);
-                addConsole(fileName);
+                string tempfilenames = Path.GetFileName(file);
+                foundfiles += 1;
+            }
+            if (foundfiles >= 1)
+            {
+                addConsole("Following content found:");
+                addConsole(tempfileNames);
+                return;
+
+            } else
+            {
+                addConsole("No files found in this directory!");
+                path_btn.Text = "Select folder";
+                path_btn.Enabled = true;
+                path_btn.ForeColor = Color.White;
+                return;
+
             }
         }
         public void addConsole(string msg)
@@ -120,12 +138,29 @@ namespace WiX_AdRemover
 
         private void exit_ico_Click(object sender, EventArgs e)
         {
+            Application.Exit();
 
         }
 
         private void selectfolder_Click(object sender, EventArgs e)
         {
+                ///Explorer
+                FolderBrowserDialog fbd = new FolderBrowserDialog();
+                DialogResult result = fbd.ShowDialog();
 
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    string path = fbd.SelectedPath;
+                    // do something with the selected folder path
+                    if (FolderExists(path))
+                    {
+                        pathbox.Text = path.ToString();
+                        path_btn.Text = "Done";
+                        path_btn.Enabled = false;
+                        path_btn.ForeColor = Color.Gray;
+                        ProcessFolder(path);
+                    }
+                }
+            }
         }
     }
-}
