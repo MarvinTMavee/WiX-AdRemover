@@ -14,6 +14,8 @@ namespace WiX_AdRemover
 {
     public partial class Form1 : Form
     {
+        string[] files = null;
+        string path = null;
         public bool FolderExists(string path)
         {
             return Directory.Exists(path);
@@ -54,15 +56,6 @@ namespace WiX_AdRemover
         {
             mouseDown = false;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -90,14 +83,10 @@ namespace WiX_AdRemover
             string[] files = Directory.GetFiles(path, "*.html*", SearchOption.AllDirectories);
             foreach (string file in files)
             {
+
                 string fileName = Path.GetFileName(file);
                 addConsole(fileName);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
         public void addConsole(string msg)
         {
@@ -110,11 +99,6 @@ namespace WiX_AdRemover
             return;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void console_box_TextChanged(object sender, EventArgs e)
         {
             if (console_box.Text == "...cmd")
@@ -124,12 +108,11 @@ namespace WiX_AdRemover
                 addConsole("         CMD v1 activated!         ");
                 addConsole("type help to get a list of all cmds");
                 addConsole("========================");
+                console_box.ReadOnly = true;
+                cmd_input.Enabled = true;
+                cmd_input.Visible = true;
+                MessageBox.Show("Warning! CMD is experimental and can cause permanently damage to the program!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void cmd_input_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -141,7 +124,21 @@ namespace WiX_AdRemover
                 string fileContent = File.ReadAllText(filePath);
                 fileContent = fileContent.Replace(oldWord, newWord);
                 File.WriteAllText(filePath, fileContent);
+                addConsole("Writing file: " + file);
+                addConsole("Writing content: " + oldWord);
+                addConsole("Replacing content: " + newWord);
+                addConsole("Done writing" + fileContent);
             }
+        }
+
+        private void cure_btn_Click(object sender, EventArgs e)
+        {
+            cure(path, files, "Hallo", "Test12345");
+        }
+
+        private void exit_ico_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

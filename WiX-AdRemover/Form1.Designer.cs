@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.path_btn = new System.Windows.Forms.Button();
@@ -35,19 +36,33 @@
             this.console_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmd_input = new System.Windows.Forms.TextBox();
+            this.cure_btn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.stats_checkbox = new System.Windows.Forms.CheckBox();
+            this.remember_checkbox = new System.Windows.Forms.CheckBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.exit_ico = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel1.Controls.Add(this.exit_ico);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 26);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
@@ -70,7 +85,7 @@
             this.path_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.path_btn.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.path_btn.ForeColor = System.Drawing.Color.White;
-            this.path_btn.Location = new System.Drawing.Point(334, 82);
+            this.path_btn.Location = new System.Drawing.Point(15, 40);
             this.path_btn.Name = "path_btn";
             this.path_btn.Size = new System.Drawing.Size(214, 33);
             this.path_btn.TabIndex = 4;
@@ -122,7 +137,127 @@
             this.cmd_input.Size = new System.Drawing.Size(146, 13);
             this.cmd_input.TabIndex = 8;
             this.cmd_input.Visible = false;
-            this.cmd_input.TextChanged += new System.EventHandler(this.cmd_input_TextChanged);
+            // 
+            // cure_btn
+            // 
+            this.cure_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.cure_btn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.cure_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cure_btn.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cure_btn.ForeColor = System.Drawing.Color.White;
+            this.cure_btn.Location = new System.Drawing.Point(15, 265);
+            this.cure_btn.Name = "cure_btn";
+            this.cure_btn.Size = new System.Drawing.Size(214, 32);
+            this.cure_btn.TabIndex = 9;
+            this.cure_btn.Text = "Cure";
+            this.cure_btn.UseVisualStyleBackColor = false;
+            this.cure_btn.Click += new System.EventHandler(this.cure_btn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Select option";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Complete Package",
+            "Only remove Ads",
+            "Only correct header"});
+            this.comboBox1.Location = new System.Drawing.Point(15, 107);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(214, 21);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cure_btn);
+            this.groupBox1.Controls.Add(this.path_btn);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(292, 76);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(245, 316);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.groupBox2.Controls.Add(this.remember_checkbox);
+            this.groupBox2.Controls.Add(this.stats_checkbox);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(661, 76);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(127, 316);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Options";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 444);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(823, 14);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // stats_checkbox
+            // 
+            this.stats_checkbox.AutoSize = true;
+            this.stats_checkbox.Location = new System.Drawing.Point(6, 19);
+            this.stats_checkbox.Name = "stats_checkbox";
+            this.stats_checkbox.Size = new System.Drawing.Size(76, 17);
+            this.stats_checkbox.TabIndex = 0;
+            this.stats_checkbox.Text = "Save stats";
+            this.stats_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // remember_checkbox
+            // 
+            this.remember_checkbox.AutoSize = true;
+            this.remember_checkbox.Location = new System.Drawing.Point(6, 40);
+            this.remember_checkbox.Name = "remember_checkbox";
+            this.remember_checkbox.Size = new System.Drawing.Size(75, 17);
+            this.remember_checkbox.TabIndex = 1;
+            this.remember_checkbox.Text = "Save path";
+            this.remember_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(15, 163);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(47, 17);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "True\r\n";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // exit_ico
+            // 
+            this.exit_ico.Image = ((System.Drawing.Image)(resources.GetObject("exit_ico.Image")));
+            this.exit_ico.Location = new System.Drawing.Point(766, 1);
+            this.exit_ico.Name = "exit_ico";
+            this.exit_ico.Size = new System.Drawing.Size(31, 23);
+            this.exit_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit_ico.TabIndex = 1;
+            this.exit_ico.TabStop = false;
+            this.exit_ico.Click += new System.EventHandler(this.exit_ico_Click);
             // 
             // Form1
             // 
@@ -130,11 +265,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmd_input);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.console_box);
             this.Controls.Add(this.pathbox);
-            this.Controls.Add(this.path_btn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -142,6 +279,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +299,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox cmd_input;
+        private System.Windows.Forms.Button cure_btn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox remember_checkbox;
+        private System.Windows.Forms.CheckBox stats_checkbox;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.PictureBox exit_ico;
     }
 }
 
