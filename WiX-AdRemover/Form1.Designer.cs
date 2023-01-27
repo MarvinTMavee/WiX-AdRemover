@@ -91,7 +91,7 @@
             this.path_btn.TabIndex = 4;
             this.path_btn.Text = "Select Folder";
             this.path_btn.UseVisualStyleBackColor = false;
-            this.path_btn.Click += new System.EventHandler(this.button1_Click_1);
+            this.path_btn.Click += new System.EventHandler(this.selectfolder_Click);
             // 
             // pathbox
             // 

@@ -21,6 +21,8 @@ namespace WiX_AdRemover
             return Directory.Exists(path);
         }
 
+
+
         public string adBanner = "";
         public Form1()
         {
@@ -57,26 +59,6 @@ namespace WiX_AdRemover
             mouseDown = false;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ///Explorer
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            DialogResult result = fbd.ShowDialog();
-
-            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
-            {
-                string path = fbd.SelectedPath;
-                // do something with the selected folder path
-                if (FolderExists(path))
-                {
-                    pathbox.Text = path.ToString();
-                    path_btn.Text = "Done";
-                    path_btn.Enabled = false;
-                    path_btn.ForeColor = Color.Gray;
-                    ProcessFolder(path);
-                }
-            }
-        }
 
         private void ProcessFolder(string path)
         {
@@ -137,6 +119,11 @@ namespace WiX_AdRemover
         }
 
         private void exit_ico_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectfolder_Click(object sender, EventArgs e)
         {
 
         }
