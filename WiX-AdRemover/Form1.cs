@@ -14,16 +14,14 @@ namespace WiX_AdRemover
 {
     public partial class Form1 : Form
     {
-        private string[] files = null;
-        string path = null;
-        int foundfiles = 0;
-        private string tempfileNames;
+
+        /// Define other classes from namespace
+
+        //Define vars
         public bool FolderExists(string path)
         {
             return Directory.Exists(path);
         }
-
-
 
         public string adBanner = "";
         public Form1()
@@ -60,37 +58,9 @@ namespace WiX_AdRemover
         {
             mouseDown = false;
         }
-
-
-        private void ProcessFolder(string path)
-        {
-            string[] files = Directory.GetFiles(path, "*.html*", SearchOption.AllDirectories);
-
-            foreach (string file in files)
-            {
-
-                string tempfilenames = Path.GetFileName(file);
-                foundfiles += 1;
-            }
-            if (foundfiles >= 1)
-            {
-                addConsole("Following content found:");
-                addConsole(tempfileNames);
-                return;
-
-            } else
-            {
-                addConsole("No files found in this directory!");
-                path_btn.Text = "Select folder";
-                path_btn.Enabled = true;
-                path_btn.ForeColor = Color.White;
-                return;
-
-            }
-        }
         public void addConsole(string msg)
         {
-            if(msg == "clear")
+            if (msg == "clear")
             {
                 console_box.Text = " ";
                 return;
@@ -115,25 +85,9 @@ namespace WiX_AdRemover
             }
         }
 
-
-        private void cure(string path, string[] files, string oldWord, string newWord)
-        {
-            foreach (string file in files)
-            {
-                string filePath = Path.Combine(path, file);
-                string fileContent = File.ReadAllText(filePath);
-                fileContent = fileContent.Replace(oldWord, newWord);
-                File.WriteAllText(filePath, fileContent);
-                addConsole("Writing file: " + file);
-                addConsole("Writing content: " + oldWord);
-                addConsole("Replacing content: " + newWord);
-                addConsole("Done writing" + fileContent);
-            }
-        }
-
         private void cure_btn_Click(object sender, EventArgs e)
         {
-            cure(path, files, "Hallo", "Test12345");
+            Cure("Hallo123", "Hello World!!");
         }
 
         private void exit_ico_Click(object sender, EventArgs e)
@@ -144,23 +98,58 @@ namespace WiX_AdRemover
 
         private void selectfolder_Click(object sender, EventArgs e)
         {
-                ///Explorer
-                FolderBrowserDialog fbd = new FolderBrowserDialog();
-                DialogResult result = fbd.ShowDialog();
+            ///Explorer
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            DialogResult result = fbd.ShowDialog();
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+            {
+                string path = fbd.SelectedPath;
+                // do something with the selected folder path
+                if (FolderExists(path))
                 {
-                    string path = fbd.SelectedPath;
-                    // do something with the selected folder path
-                    if (FolderExists(path))
-                    {
-                        pathbox.Text = path.ToString();
-                        path_btn.Text = "Done";
-                        path_btn.Enabled = false;
-                        path_btn.ForeColor = Color.Gray;
-                        ProcessFolder(path);
-                    }
+                    pathbox.Text = path.ToString();
+                    path_btn.Text = "Done";
+                    path_btn.Enabled = false;
+                    path_btn.ForeColor = Color.Gray;
+                    ProcessFolder(path);
                 }
             }
         }
+        private string[] files;
+        public void ProcessFolder(string path)
+        {
+
+            addConsole("Start processing folder..");
+            addConsole("Scanning files..");
+            files = Directory.GetFiles(path, "*.html*", SearchOption.AllDirectories);
+            foreach (string file in files)
+            {
+                addConsole(file);
+
+            }
+        }
+        public void Cure(string oldWord, string newWord)
+        {
+            addConsole("Starting Cure proccess for " + files);
+            foreach (string file in files)
+            {
+                string fileContent = File.ReadAllText(file);
+                addConsole("File curing w/ Content:");
+                addConsole(fileContent);
+                fileContent = fileContent.Replace(oldWord, newWord);
+                addConsole("Replacing Content:");
+                addConsole(oldWord + "to");
+                addConsole(newWord + "replaced");
+                File.WriteAllText(file, fileContent);
+                addConsole("Current file done!");
+            }
+            addConsole(Environment.NewLine);
+            addConsole("Creating Log..");
+            File.WriteAllText(pathbox.Text + "/Log.log", console_box.Text);
+            addConsole(Environment.NewLine);
+            addConsole("Saved security log at:");
+            addConsole(pathbox.Text + " log.log");
+        }
     }
+}
