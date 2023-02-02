@@ -9,3 +9,14 @@ C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover
 C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.csproj.CoreCompileInputs.cache
 C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.exe
 C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.pdb
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\AutoUpdater.NET.dll
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\AutoUpdater.NET.pdb
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\AutoUpdater.NET.xml
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.csproj.CopyComplete
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\WiX-AdRemover.exe.manifest
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\bin\Debug\WiX-AdRemover.application
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.exe.manifest
+C:\Users\Marvin\source\repos\WiX-AdRemover\WiX-AdRemover\obj\Debug\WiX-AdRemover.application
