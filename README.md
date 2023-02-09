@@ -1,5 +1,7 @@
 # WiX.com AD Remover
  
+ [![Maintenance](https://img.shields.io/badge/Maintained%3F-sometimes-yellow.svg)](https://GitHub.com/MarvinTMavee/WiX-AdRemover/graphs/commit-activity)
+ 
 DISCLAIMER:
 
 This product and source is for educational purpose only. Any damage that is made by use is not our/my fault. To properly remove an AD from a WiX.com website, please buy the designated package from the offical website. Thanks!
