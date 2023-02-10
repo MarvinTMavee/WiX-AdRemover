@@ -11,6 +11,13 @@ I decided to publish this source since I haven't felt like working on it so ofte
 
 <h2>How to:</h2>
 
-<h4><b>1. Download the website with <a href="https://www.httrack.com/page/2/en/index.html">HTTrack</a></b></h4>
+<h4><b>The follwing steps require you to download the website with <a href="https://www.httrack.com/page/2/en/index.html">HTTrack</a></b></h4>
 
-<h4><b>2.</b></h4>
+
+
+<img src="https://maevedev.com/docs/step1.png">
+<img src="https://maevedev.com/docs/step2.png">
+<img src="https://maevedev.com/docs/step3.png">
+<img src="https://maevedev.com/docs/step4.png">
+<img src="https://maevedev.com/docs/step5.png">
+<img src="https://maevedev.com/docs/step6.png">
