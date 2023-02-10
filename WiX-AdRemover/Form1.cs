@@ -14,13 +14,6 @@ namespace WiX_AdRemover
     public partial class Form1 : Form
     {
 
-        /*      WiX Ad Remover
-         *  made by Maeve Development
-         * 
-         * Copyright 2023 - All rights reserved
-         * 
-         * Unauthorized use and piracy is prohibited by law and will be tracked.
-         */
 
         //Define vars
         public bool FolderExists(string path)
