@@ -38,17 +38,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmd_input = new System.Windows.Forms.TextBox();
             this.cure_btn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.remember_checkbox = new System.Windows.Forms.CheckBox();
-            this.stats_checkbox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,35 +158,9 @@
             this.cure_btn.UseVisualStyleBackColor = false;
             this.cure_btn.Click += new System.EventHandler(this.cure_btn_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Select option";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Complete Package",
-            "Only remove Ads",
-            "Only correct header"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 107);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1.TabIndex = 11;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cure_btn);
             this.groupBox1.Controls.Add(this.path_btn);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -205,8 +174,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.groupBox2.Controls.Add(this.remember_checkbox);
-            this.groupBox2.Controls.Add(this.stats_checkbox);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(661, 76);
@@ -215,26 +182,6 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Options";
-            // 
-            // remember_checkbox
-            // 
-            this.remember_checkbox.AutoSize = true;
-            this.remember_checkbox.Location = new System.Drawing.Point(6, 40);
-            this.remember_checkbox.Name = "remember_checkbox";
-            this.remember_checkbox.Size = new System.Drawing.Size(75, 17);
-            this.remember_checkbox.TabIndex = 1;
-            this.remember_checkbox.Text = "Save path";
-            this.remember_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // stats_checkbox
-            // 
-            this.stats_checkbox.AutoSize = true;
-            this.stats_checkbox.Location = new System.Drawing.Point(6, 19);
-            this.stats_checkbox.Name = "stats_checkbox";
-            this.stats_checkbox.Size = new System.Drawing.Size(76, 17);
-            this.stats_checkbox.TabIndex = 0;
-            this.stats_checkbox.Text = "Save stats";
-            this.stats_checkbox.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -268,9 +215,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,13 +231,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox cmd_input;
         private System.Windows.Forms.Button cure_btn;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox remember_checkbox;
-        private System.Windows.Forms.CheckBox stats_checkbox;
         private System.Windows.Forms.PictureBox exit_ico;
     }
 }
