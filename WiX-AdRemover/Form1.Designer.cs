@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exit_ico = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.path_btn = new System.Windows.Forms.Button();
             this.pathbox = new System.Windows.Forms.TextBox();
@@ -41,16 +42,14 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.stats_checkbox = new System.Windows.Forms.CheckBox();
             this.remember_checkbox = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.exit_ico = new System.Windows.Forms.PictureBox();
+            this.stats_checkbox = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,6 +65,17 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_Event);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp_Event);
+            // 
+            // exit_ico
+            // 
+            this.exit_ico.Image = ((System.Drawing.Image)(resources.GetObject("exit_ico.Image")));
+            this.exit_ico.Location = new System.Drawing.Point(766, 1);
+            this.exit_ico.Name = "exit_ico";
+            this.exit_ico.Size = new System.Drawing.Size(31, 23);
+            this.exit_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exit_ico.TabIndex = 1;
+            this.exit_ico.TabStop = false;
+            this.exit_ico.Click += new System.EventHandler(this.exit_ico_Click);
             // 
             // label2
             // 
@@ -97,13 +107,13 @@
             // 
             this.pathbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.pathbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.pathbox.ForeColor = System.Drawing.Color.DimGray;
+            this.pathbox.ForeColor = System.Drawing.Color.Gray;
             this.pathbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.pathbox.Location = new System.Drawing.Point(0, 33);
             this.pathbox.Name = "pathbox";
-            this.pathbox.ReadOnly = true;
             this.pathbox.Size = new System.Drawing.Size(800, 13);
             this.pathbox.TabIndex = 5;
+            this.pathbox.TextChanged += new System.EventHandler(this.pathbox_TextChanged);
             // 
             // console_box
             // 
@@ -180,7 +190,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cure_btn);
@@ -207,15 +216,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Options";
             // 
-            // pictureBox1
+            // remember_checkbox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 444);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(823, 14);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.remember_checkbox.AutoSize = true;
+            this.remember_checkbox.Location = new System.Drawing.Point(6, 40);
+            this.remember_checkbox.Name = "remember_checkbox";
+            this.remember_checkbox.Size = new System.Drawing.Size(75, 17);
+            this.remember_checkbox.TabIndex = 1;
+            this.remember_checkbox.Text = "Save path";
+            this.remember_checkbox.UseVisualStyleBackColor = true;
             // 
             // stats_checkbox
             // 
@@ -227,37 +236,15 @@
             this.stats_checkbox.Text = "Save stats";
             this.stats_checkbox.UseVisualStyleBackColor = true;
             // 
-            // remember_checkbox
+            // pictureBox1
             // 
-            this.remember_checkbox.AutoSize = true;
-            this.remember_checkbox.Location = new System.Drawing.Point(6, 40);
-            this.remember_checkbox.Name = "remember_checkbox";
-            this.remember_checkbox.Size = new System.Drawing.Size(75, 17);
-            this.remember_checkbox.TabIndex = 1;
-            this.remember_checkbox.Text = "Save path";
-            this.remember_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(15, 163);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "True\r\n";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // exit_ico
-            // 
-            this.exit_ico.Image = ((System.Drawing.Image)(resources.GetObject("exit_ico.Image")));
-            this.exit_ico.Location = new System.Drawing.Point(766, 1);
-            this.exit_ico.Name = "exit_ico";
-            this.exit_ico.Size = new System.Drawing.Size(31, 23);
-            this.exit_ico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.exit_ico.TabIndex = 1;
-            this.exit_ico.TabStop = false;
-            this.exit_ico.Click += new System.EventHandler(this.exit_ico_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 444);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(823, 14);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -279,12 +266,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit_ico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +294,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox remember_checkbox;
         private System.Windows.Forms.CheckBox stats_checkbox;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.PictureBox exit_ico;
     }
 }
