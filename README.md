@@ -7,7 +7,10 @@ DISCLAIMER:
 
 This product and source is for educational purpose only. Any damage that is made by use is not our/my fault. To properly remove an AD from a WiX.com website, please buy the designated package from the offical website. Thanks!
 
-I decided to publish this source since I haven't felt like working on it so often anymore. Any remakes are welcome under the CC BY-NC license. Any violation is prohibied by law.
+I decided to publish this source since I haven't felt like working on it so often anymore. Any remakes are welcome.
+
+NOTE: Wix.Com is not really working on local server, becahse there is a 50% chanche of you getting stuck in a loading loop.
+I maybe know why, and I maybe will try to fix it. Thanks!
 
 <h2>How to:</h2>
 
