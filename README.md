@@ -16,11 +16,4 @@ I maybe know why, and I maybe will try to fix it. Thanks!
 
 <h4><b>The follwing steps require you to download the website with <a href="https://www.httrack.com/page/2/en/index.html">HTTrack</a></b></h4>
 
-
-
-<img src="https://maevedev.com/docs/step1.png">
-<img src="https://maevedev.com/docs/step2.png">
-<img src="https://maevedev.com/docs/step3.png">
-<img src="https://maevedev.com/docs/step4.png">
-<img src="https://maevedev.com/docs/step5.png">
-<img src="https://maevedev.com/docs/step6.png">
+tutorial coming soon
