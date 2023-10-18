@@ -1,7 +1,6 @@
 # WiX.com AD Remover
  
  [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://GitHub.com/MarvinTMavee/WiX-AdRemover/graphs/commit-activity)
- [![Credit](https://img.shields.io/badge/MadeBy-MaeveDevelopment-green.svg)](https://GitHub.com/MarvinTMavee)
  
 DISCLAIMER:
 
